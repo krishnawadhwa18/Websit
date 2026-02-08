@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CA Office Data Management</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark">CA</span>
+        <div>
+          <p class="brand-title">Office Data Management</p>
+          <p class="brand-subtitle">Secure client, admin, and staff workspace</p>
+        </div>
+      </div>
+      <nav class="top-nav">
+        <button class="nav-btn is-active" data-view="login">Login</button>
+        <button class="nav-btn" data-view="signup">Sign Up</button>
+        <button class="nav-btn" data-view="dashboard">Client Dashboard</button>
+        <button class="nav-btn" data-view="admin">Admin Console</button>
+        <button class="nav-btn" data-view="staff">Staff Workspace</button>
+      </nav>
+    </header>
+
+    <main class="layout">
+      <section class="hero">
+        <h1>Black &amp; White Professional Portal</h1>
+        <p>
+          A structured system for CA offices to manage client onboarding, document
+          intake, approvals, and staff workflows.
+        </p>
+        <div class="hero-actions">
+          <button class="primary" data-view="signup">Create Account</button>
+          <button class="ghost" data-view="login">Sign In</button>
+        </div>
+      </section>
+
+      <section class="view-panel" id="login" data-view-panel>
+        <div class="panel-header">
+          <h2>Client Login</h2>
+          <p>Access your dashboard and manage requests.</p>
+        </div>
+        <form class="form-grid">
+          <label>
+            Email or Mobile
+            <input type="text" placeholder="you@example.com" required />
+          </label>
+          <label>
+            Password
+            <input type="password" placeholder="••••••••" required />
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" />
+            Keep me signed in
+          </label>
+          <div class="form-actions">
+            <button class="primary" type="submit">Sign In</button>
+            <button class="secondary" type="button">Forgot Password</button>
+          </div>
+          <div class="divider">
+            <span>Or continue with</span>
+          </div>
+          <button class="google" type="button">Sign in with Google</button>
+        </form>
+      </section>
+
+      <section class="view-panel" id="signup" data-view-panel>
+        <div class="panel-header">
+          <h2>Create Account</h2>
+          <p>Complete the mandatory KYC details to activate your workspace.</p>
+        </div>
+        <form class="form-grid">
+          <label>
+            Full Name <span class="tag mandatory">Mandatory</span>
+            <input type="text" placeholder="Rohan Sharma" required />
+          </label>
+          <label>
+            Email Address <span class="tag mandatory">Mandatory</span>
+            <input type="email" placeholder="rohan@email.com" required />
+          </label>
+          <label>
+            Mobile Number <span class="tag mandatory">Mandatory</span>
+            <input type="tel" placeholder="+91 98765 43210" required />
+          </label>
+          <label>
+            PAN Number <span class="tag mandatory">Mandatory</span>
+            <input type="text" placeholder="ABCDE1234F" required />
+          </label>
+          <label>
+            Aadhaar Number <span class="tag optional">Optional</span>
+            <input type="text" placeholder="XXXX-XXXX-XXXX" />
+          </label>
+          <label>
+            GSTIN <span class="tag optional">Optional</span>
+            <input type="text" placeholder="22AAAAA0000A1Z5" />
+          </label>
+          <label>
+            Firm / Business Name
+            <input type="text" placeholder="Sharma &amp; Co." />
+          </label>
+          <label>
+            Address
+            <input type="text" placeholder="Street, City, State" />
+          </label>
+          <label>
+            Preferred Communication
+            <select>
+              <option>Email</option>
+              <option>WhatsApp</option>
+              <option>Phone</option>
+            </select>
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" required />
+            I agree to the privacy policy and consent to data verification.
+          </label>
+          <div class="form-actions">
+            <button class="primary" type="submit">Submit &amp; Continue</button>
+            <button class="secondary" type="button">Save Draft</button>
+          </div>
+          <div class="divider">
+            <span>Or sign up using</span>
+          </div>
+          <button class="google" type="button">Sign up with Google</button>
+        </form>
+      </section>
+
+      <section class="view-panel" id="dashboard" data-view-panel>
+        <div class="panel-header">
+          <h2>Client Dashboard</h2>
+          <p>Upload documents, request work, and track approvals.</p>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+            <h3>Quick Actions</h3>
+            <ul>
+              <li>Upload data in any format (PDF, Excel, ZIP).</li>
+              <li>Download approved files instantly.</li>
+              <li>Raise a work request with priority.</li>
+            </ul>
+            <button class="primary">Start New Upload</button>
+          </article>
+          <article class="card">
+            <h3>Work Requests</h3>
+            <div class="status">
+              <p>GST Filing - Q2</p>
+              <span class="pill in-progress">In Progress</span>
+            </div>
+            <div class="status">
+              <p>ITR Review</p>
+              <span class="pill pending">Pending Approval</span>
+            </div>
+            <div class="status">
+              <p>Payroll Compliance</p>
+              <span class="pill complete">Completed</span>
+            </div>
+          </article>
+          <article class="card">
+            <h3>Downloads</h3>
+            <ul class="file-list">
+              <li>
+                <span>GST_Return_Q2.pdf</span>
+                <button class="ghost">Download</button>
+              </li>
+              <li>
+                <span>ITR_Review_Notes.docx</span>
+                <button class="ghost">Download</button>
+              </li>
+              <li>
+                <span>Payroll_Report.xlsx</span>
+                <button class="ghost">Download</button>
+              </li>
+            </ul>
+          </article>
+        </div>
+        <div class="grid-2">
+          <article class="card">
+            <h3>Upload Center</h3>
+            <p class="muted">All uploads are routed to the CA/Admin approval queue.</p>
+            <div class="upload">
+              <p>Drag &amp; drop files here or</p>
+              <button class="secondary">Browse Files</button>
+            </div>
+          </article>
+          <article class="card">
+            <h3>Request New Work</h3>
+            <form class="form-grid compact">
+              <label>
+                Request Type
+                <select>
+                  <option>Audit Assistance</option>
+                  <option>GST Return Filing</option>
+                  <option>Accounting Update</option>
+                  <option>Payroll Compliance</option>
+                </select>
+              </label>
+              <label>
+                Required By
+                <input type="date" />
+              </label>
+              <label>
+                Notes
+                <textarea rows="3" placeholder="Add instructions..."></textarea>
+              </label>
+              <button class="primary" type="submit">Submit Request</button>
+            </form>
+          </article>
+        </div>
+      </section>
+
+      <section class="view-panel" id="admin" data-view-panel>
+        <div class="panel-header">
+          <h2>Admin Console</h2>
+          <p>Full access to manage clients, folders, permissions, and approvals.</p>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+            <h3>Folder Control</h3>
+            <ul>
+              <li>Create or delete client folders manually.</li>
+              <li>Archive completed engagements.</li>
+              <li>Approve staff uploads before client visibility.</li>
+            </ul>
+            <div class="form-actions">
+              <button class="primary">Create Folder</button>
+              <button class="secondary">Delete Folder</button>
+            </div>
+          </article>
+          <article class="card">
+            <h3>Staff Accounts</h3>
+            <p>Invite staff and define role permissions.</p>
+            <div class="chip-group">
+              <span class="chip">Create Accounts</span>
+              <span class="chip">Upload Files</span>
+              <span class="chip">Approve Tasks</span>
+              <span class="chip">Client Communication</span>
+            </div>
+            <button class="primary">Add Staff Member</button>
+          </article>
+          <article class="card">
+            <h3>Approval Queue</h3>
+            <div class="status">
+              <p>Payroll_Updates.xlsx</p>
+              <span class="pill pending">Needs Approval</span>
+            </div>
+            <div class="status">
+              <p>GST_Working_Papers.zip</p>
+              <span class="pill pending">Needs Approval</span>
+            </div>
+            <button class="secondary">Review All</button>
+          </article>
+        </div>
+        <div class="grid-2">
+          <article class="card">
+            <h3>Delegate Permissions</h3>
+            <form class="form-grid compact">
+              <label>
+                Select Staff
+                <select>
+                  <option>Neha Kapoor</option>
+                  <option>Arjun Verma</option>
+                  <option>Pooja Iyer</option>
+                </select>
+              </label>
+              <label>
+                Assign Role
+                <select>
+                  <option>Senior Associate</option>
+                  <option>Reviewer</option>
+                  <option>Accounts Lead</option>
+                </select>
+              </label>
+              <label>
+                Permissions
+                <textarea rows="3" placeholder="Describe access scope..."></textarea>
+              </label>
+              <button class="primary" type="submit">Grant Access</button>
+            </form>
+          </article>
+          <article class="card">
+            <h3>Client Visibility</h3>
+            <p class="muted">
+              Files uploaded by staff remain in the approval queue until CA/Admin approval. Once
+              approved, they appear automatically in the respective client dashboard.
+            </p>
+            <button class="ghost">View Audit Log</button>
+          </article>
+        </div>
+      </section>
+
+      <section class="view-panel" id="staff" data-view-panel>
+        <div class="panel-header">
+          <h2>Staff Workspace</h2>
+          <p>Track assigned tasks, update status, and upload completed work.</p>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+            <h3>My Tasks</h3>
+            <div class="status">
+              <p>ITR Review - Rao Enterprises</p>
+              <span class="pill in-progress">Working</span>
+            </div>
+            <div class="status">
+              <p>GST Compliance - Q2</p>
+              <span class="pill pending">Awaiting Data</span>
+            </div>
+            <button class="secondary">Update Status</button>
+          </article>
+          <article class="card">
+            <h3>Upload Completed Work</h3>
+            <p class="muted">Uploads route to admin approval before client access.</p>
+            <div class="upload">
+              <p>Drop files for approval</p>
+              <button class="secondary">Upload Files</button>
+            </div>
+          </article>
+          <article class="card">
+            <h3>Staff Club</h3>
+            <ul>
+              <li>Ask queries and discuss complex cases.</li>
+              <li>Post work notes or compliance alerts.</li>
+              <li>Notify admin about blockers.</li>
+            </ul>
+            <button class="ghost">Open Discussion</button>
+          </article>
+        </div>
+        <div class="grid-2">
+          <article class="card">
+            <h3>Task Completion</h3>
+            <form class="form-grid compact">
+              <label>
+                Task Name
+                <input type="text" placeholder="Payroll Review" />
+              </label>
+              <label>
+                Completion Notes
+                <textarea rows="3" placeholder="Summary of work completed..."></textarea>
+              </label>
+              <button class="primary" type="submit">Submit for Approval</button>
+            </form>
+          </article>
+          <article class="card">
+            <h3>Notifications</h3>
+            <ul class="timeline">
+              <li>
+                <strong>Admin approval pending</strong>
+                <span>GST_Working_Papers.zip uploaded 2h ago</span>
+              </li>
+              <li>
+                <strong>New task assigned</strong>
+                <span>Review ITR for Rao Enterprises</span>
+              </li>
+              <li>
+                <strong>Client query</strong>
+                <span>Need clarifications on payroll summary</span>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2024 CA Office Data Management. Built for secure client collaboration.</p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
